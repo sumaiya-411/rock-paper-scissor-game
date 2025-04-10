@@ -1,6 +1,5 @@
 import random
 
-# Let the user choose Rock, Paper, or Scissors
 def get_user_choice():
     print("\nPick one:")
     print("1. Rock")
@@ -16,11 +15,9 @@ def get_user_choice():
     
     return choices.get(choice)
 
-# Let the computer randomly choose
 def get_computer_choice():
     return random.choice(["rock", "paper", "scissors"])
 
-# Determine the winner
 def decide_winner(player, computer):
     if player == computer:
         return "draw"
@@ -66,7 +63,6 @@ def main():
 
         print(f"📊 Score: You {user_score} - {computer_score} Computer")
 
-        # Optional: End the match when someone hits 5 points
         if user_score == 5:
             print("\n🎉 Congrats! You won the match!")
             break
@@ -74,7 +70,6 @@ def main():
             print("\n💻 Computer wins the match. Better luck next time!")
             break
 
-        # Ask if they want to continue after each round
         play_again = input("\nPlay another round? (y/n): ").strip().lower()
         if play_again != "y":
             print("\n👋 Thanks for playing! See you next time!")
